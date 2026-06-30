@@ -25,20 +25,25 @@ class PanelPage:
         self.driver.get(self.url)
         return self
 
-    def titulo(self):
+    def obtener_titulo(self):
         return self.wait.until(
-            EC.visibility_of_element_located(self.TITULO)).text
+            EC.visibility_of_element_located(self.TITULO)
+        ).text
 
     def agendar(self, fecha):
         campo = self.driver.find_element(*self.FECHA)
         campo.clear()
         campo.send_keys(fecha)
-        self.wait.until(EC.element_to_be_clickable(self.BTN_AGENDAR)).click()
+        self.wait.until(
+            EC.element_to_be_clickable(self.BTN_AGENDAR)
+        ).click()
 
     def texto_mensaje(self):
         return self.wait.until(
-            EC.visibility_of_element_located(self.MENSAJE)).text
+            EC.visibility_of_element_located(self.MENSAJE)
+        ).text
 
     def texto_error(self):
         return self.wait.until(
-            EC.visibility_of_element_located(self.ERROR)).text
+            EC.visibility_of_element_located(self.ERROR)
+        ).text

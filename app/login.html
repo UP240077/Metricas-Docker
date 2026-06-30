@@ -16,11 +16,15 @@
 
   <!-- Los IDs (usuario, clave, btn-login, saludo, error) son los que
        buscan los Page Objects de Selenium. -->
-  <form id="form-login" onsubmit="return false;">
-    <input id="usuario" placeholder="Correo">
-    <input id="clave" type="password" placeholder="Contraseña">
-    <button id="btn-login" onclick="entrar()">Entrar</button>
-  </form>
+<form id="form-login" onsubmit="return false;">
+  <label for="usuario">Correo</label>
+  <input id="usuario" type="text" placeholder="Correo">
+
+  <label for="clave">Contraseña</label>
+  <input id="clave" type="password" placeholder="Contraseña">
+
+  <button id="btn-login" type="button" onclick="entrar()">Entrar</button>
+</form>
 
   <p id="error" style="display:none;"></p>
   <p id="saludo" style="display:none;"></p>

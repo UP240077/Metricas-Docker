@@ -16,10 +16,20 @@
        autenticarse; en la demo se abre directamente. -->
   <h1 id="titulo-panel">Panel de citas</h1>
 
-  <form id="form-cita" onsubmit="return false;">
-    <input id="fecha" placeholder="AAAA-MM-DD">
-    <button id="btn-agendar" onclick="agendar()">Agendar</button>
-  </form>
+<form id="form-cita" onsubmit="return false;">
+  <label for="fecha">Fecha de la cita</label>
+  <input
+      id="fecha"
+      type="date"
+      placeholder="AAAA-MM-DD">
+
+  <button
+      id="btn-agendar"
+      type="button"
+      onclick="agendar()">
+      Agendar
+  </button>
+</form>
 
   <p id="error" style="display:none;"></p>
   <p id="mensaje" style="display:none;"></p>
